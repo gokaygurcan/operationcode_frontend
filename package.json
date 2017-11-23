@@ -32,7 +32,8 @@
     "react-select": "^1.0.0-rc.5",
     "react-table": "^6.0.5",
     "sinon": "^2.3.2",
-    "universal-cookie": "^2.0.7"
+    "universal-cookie": "^2.0.7",
+    "snyk": "^1.49.5"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -67,7 +68,6 @@
     "prettier-eslint": "^6.1.2",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
-    "snyk": "^1.42.3",
     "style-loader": "0.13.1",
     "sw-precache-webpack-plugin": "0.9.1",
     "url-loader": "0.5.7",
@@ -84,7 +84,9 @@
     "lint": "eslint src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "backend": "./bin/run_backend.sh"
+    "backend": "./bin/run_backend.sh",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "moduleDirectories": [
@@ -120,5 +122,6 @@
       "react-app"
     ]
   },
-  "homepage": "http://frontend.operationcode.org/"
+  "homepage": "http://frontend.operationcode.org/",
+  "snyk": true
 }
